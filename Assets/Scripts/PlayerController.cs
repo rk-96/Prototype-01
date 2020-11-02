@@ -5,12 +5,12 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Private Variables
-    private float speed = 20.0f;
-    private float turnSpeed = 45.0f;
+    [SerializeField] private float speed = 20.0f;
+    [SerializeField] private float turnSpeed = 45.0f;
     private float horizontalInput;
     private float forwardInput;
 
-    void Update()
+    void FixedUpdate()
     {
         // This is where we get player input
         horizontalInput = Input.GetAxis("Horizontal");
